@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .style {
+        text-align: center;
+        display: flex;
+    }
+    .color {
+              
+        flex: 1;
+    }
+    </style>
+</head>
+<body>
+    <div id="first" class="style">
+</div>
+    
+    <script>
+    function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
+}
+    let arr = ['mohamad', 'marwa', 'akram', 'abdullah', 'ahmad', 'mahmoud', 'michel', 'abdelmajid'];
+    let i = 0;
+    shuffle(arr);
+    let newArr = [];
+    while(i < arr.length) {
+        newArr.push(arr.slice(i, i + 3));
+        i += 3;
+    }
+    let first = document.querySelector('#first');
+    for(let p = 0; p < newArr.length; p++) {
+       
+        first.innerHTML += `<div class="color">${newArr[p].join('<br>')}</div>`
+        
+    }
+    </script>
+</body>
+</html>

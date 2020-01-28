@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    // function longestWord(sent) {
+    //     const wordArr = sent.toLowerCase().match(/[a-z0-9]+/g);
+    //     const sorted = wordArr.sort(function(a, b){
+    //         return b.length - a.length
+    //     });
+    //     const long = sorted.filter(function(word) {
+    //         return word.length === sorted[0].length
+    //     })
+
+    //     if(long.length === 1) {
+    //         return long[0]
+    //     } else {
+    //         return long
+    //     }
+        
+    // }
+    // console.log(longestWord("Hello theree, my name is brad"))
+
+
+    function chunkArray(arr, len){
+        chunkedArr = [];
+        let i = 0;
+        while(i < arr.length){
+            chunkedArr.push(arr.slice(i, i + len))
+            i += len
+        }
+        return chunkedArr
+    }
+    console.log(chunkArray([1,2,3,4,5,6,7], 3))
+
+    // function flattenArray(arr){
+    //     // return arr.reduce(function(a,b) {
+    //     //   return a.concat(b)
+    //     // })
+
+
+    //     return [].concat(...arr)
+    // }
+    // console.log(flattenArray([ [1,2], [3,4], [5,6], [7] ]))
+
+    // function formatStr(str) {
+    //     return str
+    //         .replace(/[^|w]/g , '')
+    //         .toLowerCase()
+    //         .split('')
+    //         .sort()
+    //         .join('')
+    // }
+    // function isAnagram(str1, str2){
+    //     return formatStr(str1) === formatStr(str2)
+    // }
+    // console.log(isAnagram("elbow", "below"))
+
+    // function letterChanges(str){
+    //     let newStr = str.toLowerCase().replace(/[a-z]/gi, function(char){
+    //         if(char === "z" || char === "Z") {
+    //             return 'a'
+    //         } else {
+    //             return String.fromCharCode(char.charCodeAt() + 1)
+    //         }
+    //     })
+    //      newStr = newStr.replace(/[a | i | e | o | u]/gi, function(voyal) {
+    //          return voyal.toUpperCase()
+    //      })
+
+    //      return newStr
+    // }
+    // console.log(letterChanges("Hello there"))
+    </script>
+</body>
+</html>
